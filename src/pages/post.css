@@ -1,0 +1,61 @@
+.link {
+
+    text-decoration: none;
+    color: black;
+}
+
+.post-list{
+    margin-top: -5rem;
+}
+
+.post-container {
+    padding: 1rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    margin: 2rem auto;
+    max-width: 720px;
+
+    background: #fafafa;
+
+    -webkit-transition: ease .5s;
+    -moz-transition: ease .5s;
+    -ms-transition: ease .5s;
+    -o-transition: ease .5s;
+    transition: ease .5s;
+}
+
+.post-container p{
+    margin-bottom: .2rem;
+}
+
+.post .gatsby-image-wrapper {
+    margin-bottom: 2rem;
+}
+
+.post-container:hover {
+    background-color: whitesmoke;
+}
+
+
+.tags {
+    display: flex;
+    flex-direction: column;
+}
+
+.tags a {
+    margin-bottom: 2rem;
+    list-style: none;
+    background-color: #ececec;
+    border: 1px solid #ffff;
+    width: 100%;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: rgb(31, 26, 26);
+
+    text-transform: capitalize;
+}
+
+.date {
+    display: block;
+    margin-bottom: 1rem;
+}
