@@ -1,0 +1,44 @@
+.post h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0.25rem;
+}
+
+.post .subtitle{
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.post .subtitle span{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post .subtitle span svg{
+    margin-right: 5px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #6b54ff;
+}
+
+.post .tag{
+    margin: 0 5px;
+}
+
+.post .tags-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}

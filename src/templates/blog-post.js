@@ -1,18 +1,20 @@
 import React from 'react';
+import './blog-post.css';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import PrevNext from '../components/prevnext';
 import MetaTags from '../components/Metatags';
 import Share from '../components/share';
+import {BsFillCalendarFill, BsFillPersonFill} from 'react-icons/bs';
 
 function BlogPost(props) {
 
     const url = props.data.site.siteMetadata.siteUrl
     const thumbnail = props.data.markdownRemark.frontmatter.image &&
         props.data.markdownRemark.frontmatter.image.childImageSharp
-    const { title, image, tags } = props.data.markdownRemark.frontmatter;
-    const { prev, next } = props.pageContext;
+    const {title, image, tags, author, date} = props.data.markdownRemark.frontmatter;
+    const {prev, next} = props.pageContext;
     return (
         <Layout>
             <MetaTags
@@ -24,16 +26,20 @@ function BlogPost(props) {
             />
             <div className="post">
                 <h1>{title}</h1>
-                {image && <Img fluid={image.childImageSharp.fluid} />}
-                <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
-                <div>
-                    <span>Tagged in </span>
-                    {tags.map((tag, i) => (
-                        <a href={`/${tag}`} key={i} style={{ marginLeft: "10px" }} >{tag}</a>
-                    ))}
+                <div className="tags-container">
+                    [{tags.map((tag, i) => (
+                    <a href={`/${tag}`} key={i} className="tag">{tag}</a>
+                ))}]
                 </div>
-                <Share title={title} url={url} pathname={props.location.pathname} />
-                <PrevNext prev={prev && prev.node} next={next && next.node} />
+                <div className="subtitle">
+                    <span><BsFillPersonFill/>{author}</span>
+                    <span><BsFillCalendarFill/>{date}</span>
+                </div>
+                {image && <Img fluid={image.childImageSharp.fluid}/>}
+                <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}}/>
+
+                <Share title={title} url={url} pathname={props.location.pathname}/>
+                <PrevNext prev={prev && prev.node} next={next && next.node}/>
             </div>
         </Layout>
     )
@@ -51,6 +57,8 @@ export const query = graphql`
        frontmatter {
         title
         tags
+        author
+        date
         image {
           childImageSharp {
             fluid(maxWidth: 786, maxHeight: 420) {

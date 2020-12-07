@@ -3,6 +3,7 @@ title: Something Crypto
 date: '2020-11-15'
 image: "uxui.jpg"
 tags: ['ux','ui', 'design']
+author: "Jay Kumar"
 ---
 
 The phrase, *“form over function”* is a perfect description of a problem that was common in technology interfaces prior to the introduction of UX design. Technology developers were primarily concerned with how their device, app, and website interfaces looked. UI, or user interface designers had a field day cooking up slick, futuristic interface displays, with high-tech looking buttons and visually-arresting animations. It was all about eye candy, and it was Halloween and Easter every day of the year.
