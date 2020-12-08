@@ -1,19 +1,23 @@
 import React from 'react';
-import "./prevnext.css"
+import './prevnext.css'
+import {AiOutlineRight, AiOutlineLeft} from 'react-icons/ai';
 
 const PrevNext = (props) => {
 
-    const { prev, next } = props
+    const {prev, next} = props
 
     return (
         <ul className="prevNext">
-            {prev && <li><a href={prev.fields.slug}>
-                Previous {" "}
-                {prev.frontmatter.title}</a></li>}
-            {next && <li><a href={next.fields.slug}>
-                Next  {" "} {next.frontmatter.title}
-
-            </a></li>}
+            {prev && <li>
+                <a href={prev.fields.slug}>
+                    <AiOutlineLeft/><strong>Previous:</strong>
+                    {prev.frontmatter.title}
+                </a></li>}
+            {next && <li>
+                <a href={next.fields.slug}>
+                    <strong>Next:</strong> {next.frontmatter.title}<AiOutlineRight/>
+                </a>
+            </li>}
         </ul>
     )
 }

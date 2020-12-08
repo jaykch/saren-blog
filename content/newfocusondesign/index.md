@@ -24,7 +24,7 @@ Is the interface intuitive? Is it clear to users what buttons do and where a cli
 
 These are some of the questions UX designers try to answer. They work to impose useful structure on the visual designs of the UI designers. The two disciplines complement each other, which is why the whole field is now referred to as UI/UX design.
 
-![uxuidesign](../assets/blogs/thinkoutsidebox.jpg "uxuidesign")
+![uxuidesign](./uxui.jpg "uxuidesign")
 
 UI/UX Design is Born
 -----------

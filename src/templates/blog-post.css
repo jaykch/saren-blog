@@ -1,7 +1,11 @@
-.post h1{
-    text-align: center;
-    font-size: 3rem;
+.post .title{
     margin-bottom: 0.25rem;
+    font-size: 3.4rem;
+    text-align: center;
+}
+
+.post h2{
+    font-size: 2.4rem;
 }
 
 .post .subtitle{
@@ -28,12 +32,15 @@
     margin-right: 5px;
 }
 
-h1, h2, h3, h4, h5, h6{
-    color: #6b54ff;
+.post p{
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 .post .tag{
     margin: 0 5px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .post .tags-container{

@@ -1,7 +1,44 @@
 .prevNext{
     list-style: none;
-    margin: 0;
+    margin: 4rem 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 1.4rem;
+}
+
+.prevNext li{
+    margin: 1rem 0;
+}
+
+.prevNext a{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.prevNext a:nth-child(1){
+    text-align: left;
+}
+
+.prevNext a:nth-last-child(1){
+    text-align: right;
+}
+
+.prevNext a strong{
+    margin-right: 10px;
+    color: #6b54ff;
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 570px) {
+    .prevNext {
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .prevNext li{
+        margin: 10px 0;
+    }
 }

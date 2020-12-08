@@ -25,7 +25,7 @@ function BlogPost(props) {
                 pathname={props.location.pathname}
             />
             <div className="post">
-                <h1>{title}</h1>
+                <h1 className="title">{title}</h1>
                 <div className="tags-container">
                     [{tags.map((tag, i) => (
                     <a href={`/${tag}`} key={i} className="tag">{tag}</a>
@@ -37,8 +37,6 @@ function BlogPost(props) {
                 </div>
                 {image && <Img fluid={image.childImageSharp.fluid}/>}
                 <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}}/>
-
-                <Share title={title} url={url} pathname={props.location.pathname}/>
                 <PrevNext prev={prev && prev.node} next={next && next.node}/>
             </div>
         </Layout>
