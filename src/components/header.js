@@ -2,13 +2,12 @@ import React from 'react'
 import {Link} from 'gatsby'
 import './header.css'
 
-import logo from '../images/logo-inverted.png'
+import logo from '../images/logo-letters.png'
 
 const Header = ({menuLinks}) => (
     <div id="header">
         <a href="/" className="title">
-            {/*<img src={logo} alt="Saren.io"/>*/}
-            <span>SAREN</span>
+            <img src={logo} alt="Saren.io"/>
         </a>
         <nav className="navbar">
             <ul style={{display: "flex", flex: 1}}>

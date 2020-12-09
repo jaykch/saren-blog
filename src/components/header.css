@@ -10,6 +10,9 @@
     align-items: center;
     -webkit-flex-flow: column;
     flex-flow: column;
+    justify-content: flex-end;
+    height: 40vh;
+    min-height: 600px;
 
     font-family: 'Lato', sans-serif;
 }
@@ -19,19 +22,8 @@
 }
 
 #header img {
-    height: 3.8rem;
-    margin: 0;
-}
-
-#header .title {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-align-items: center;
-    align-items: center;
-
-    min-height: 40vh;
+    height: 3rem;
+    margin: 0 0 1rem;
 }
 
 #header span {
@@ -51,6 +43,7 @@
 #header ul {
     margin: 0;
     color: #fafafa;
+    padding: 0;
 }
 
 #header ul a {

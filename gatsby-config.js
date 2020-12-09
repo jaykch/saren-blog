@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Saren.io | Blog',
     siteUrl: 'https://blog.saren.io',
+    description: `Latest official news on Saren.io project details and announcements.`,
+    author: `@jaykch`,
     menuLinks:[
       {
         name: 'HOME',

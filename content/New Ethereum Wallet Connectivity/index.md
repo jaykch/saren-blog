@@ -1,8 +1,8 @@
 ---
-title: ABC
-date: '2020-12-30'
+title: New Ethereum Wallet Connectivity
+date: '2020-09-20'
 image: "uxui.jpg"
-tags: ['ux','ui', 'design']
+tags: ['Announcement','Feature', 'dapp']
 author: "Jay Kumar"
 ---
 

@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import {graphql} from 'gatsby'
 import PrevNext from '../components/prevnext';
 import MetaTags from '../components/Metatags';
-import Share from '../components/share';
+//import Share from '../components/share';
 import {BsFillCalendarFill, BsFillPersonFill} from 'react-icons/bs';
 
 function BlogPost(props) {
