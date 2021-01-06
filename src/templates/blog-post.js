@@ -33,7 +33,7 @@ function BlogPost(props) {
                 </div>
                 <div className="subtitle">
                     <span><BsFillPersonFill/>{author}</span>
-                    <span><BsFillCalendarFill/>{date}</span>
+                    <span><BsFillCalendarFill/>{new Date(date).toLocaleDateString("en-US",{ weekday: "short", year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 </div>
                 {image && <Img fluid={image.childImageSharp.fluid}/>}
                 <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}}/>
@@ -59,7 +59,7 @@ export const query = graphql`
         date
         image {
           childImageSharp {
-            fluid(maxWidth: 786, maxHeight: 420) {
+            fluid(maxWidth: 786, maxHeight: 420, quality:90) {
               ...GatsbyImageSharpFluid
             }
           }

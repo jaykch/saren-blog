@@ -10,12 +10,12 @@ const PrevNext = (props) => {
         <ul className="prevNext">
             {prev && <li>
                 <a href={prev.fields.slug}>
-                    <AiOutlineLeft/><strong>Previous:</strong>
-                    {prev.frontmatter.title}
+                    <strong>Next:</strong>{prev.frontmatter.title}<AiOutlineRight/>
                 </a></li>}
             {next && <li>
                 <a href={next.fields.slug}>
-                    <strong>Next:</strong> {next.frontmatter.title}<AiOutlineRight/>
+                    <AiOutlineLeft/><strong>Previous:</strong>
+                    {next.frontmatter.title}
                 </a>
             </li>}
         </ul>
