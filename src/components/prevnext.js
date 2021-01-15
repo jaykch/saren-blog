@@ -8,16 +8,16 @@ const PrevNext = (props) => {
 
     return (
         <ul className="prevNext">
-            {prev && <li>
-                <a href={prev.fields.slug}>
-                    <strong>Next:</strong>{prev.frontmatter.title}<AiOutlineRight/>
-                </a></li>}
             {next && <li>
                 <a href={next.fields.slug}>
                     <AiOutlineLeft/><strong>Previous:</strong>
                     {next.frontmatter.title}
                 </a>
             </li>}
+            {prev && <li>
+                <a href={prev.fields.slug}>
+                    <strong>Next:</strong>{prev.frontmatter.title}<AiOutlineRight/>
+                </a></li>}
         </ul>
     )
 }
