@@ -6,43 +6,30 @@ tags: ['story','feature']
 author: "Jay Kumar"
 ---
 
-New Features?
+Architecture
 -----------
 
-I started this app back in August 2020 as I was looking for an Ethereum portfolio app that you just put your public key in, and it gives you all the details in one place.
-At first, I was using delta, but their prices weren't always up to date, and a lot of coins I was trading were just not on there.
+After finishing the ERC20 list. I now wanted to check analytics for other coins I was holding. Coins like bitcoin and polkadot. 
+I knew how to get the data for it but I had been using contract address as the id for all my coins so far. So now I had to use a different key for the ID in order to maintain consistency within the app.
+I decided to use the symbol for the ID and left the contract address as the ID for the previous coins. 
 
-I needed an app that could show me all the coins I hold but also tell me all the details like price action, market data, where to buy etc. in the same place. I used Zerion, but it always took too long to load or failed to load in some cases.
-I thought I would give it a go and began building a simple webpage that gets all your tokens, and then calls the Coingecko api to give you all the details about it.
+At some point in the future I probably will redo the entire server with better architecture and visit the key again.
 
-Design
------------
+Additional Features
+-------------
 
-When I was designing it, I really needed something to be super simple, where I don't have to think at all while using it, as simplistic user experience as possible.
-I started by just showing cards where you just hover over any of them to get details about it. For the CSS, I decided to follow what Uniswap was doing, as it was the best looking crypto app I had seen so far.
+Subsequently, I decided to add trending to my app to get trending and most searched coins. By this point the app started getting interest and I was getting emails from people with suggestions.
+One of the suggestions I really liked was adding favourites. It needed to be user specific but I did not want to store any user data. 
 
-To speed up development, I used Gatsby.js and built it as a purely front-end application.
-At the time, I did not need any server side code and was happy to change it into a full stack app once I needed a database.
-It allowed me to get a prototype up and running in a couple of days and start getting feedback on it.
-
-Once I finished the cards view, I decided to add a table view as it would be easier to view, and I wanted the ability to sort my holdings based on price change, market cap, volume etc.
-To do this quickly, I installed ant design and used its prebuilt components for faster development.
-
-Wallet Search and Save
----------------------------
-
-Subsequently, after finishing up the table view I decided I wanted the ability to search for any wallet instead of hard coding my public key and wanted the ability to save any wallet, 
-so I don't have to search for it over and over again every time I refresh the page.
-Although Etherscan can be used for this, the prices of low cap coins are mostly unavailable. 
-
-Additionally, I wanted a better view and more organised way of looking at the coins in any eth wallet.
-The idea behind it was to find public keys of good traders and follow closely how they trade to notice any useful trends I could use in my own trading strategy.
-
+As a user myself, I hated the idea of having to log in just for my favourites every time. I am pretty lazy so I knew I would never do it, I just wanted the favourites to be there as soon as I open the site.
+Furthermore, I believe in simplistic design, and user accounts just sounded to cluttered to me. 
+I decided to store the favourites in local storage and using react hooks, I loaded the favourites as soon as someone opened the site, if they had any favourites that is. 
+This seemed to be the fastest and least complicated solution for me as both a designer and a user.
 
 Conclusion
 -------------
 
-I really enjoyed making this first iteration and shared it with people I knew who were into Crypto.
-I got a few feature requests by them and overall they really liked what I was doing which motivated me to continue working on this app.
+As I was adding these features, the project kept getting bigger and bigger. I started it as just a webpage to view what coins I held and now I had all this data of over 500 coins. 
+It really started to motivate me into creating something bigger and maybe build it into a DAPP.
 
-You can view the video to the initial prototype here - https://www.youtube.com/watch?v=w_I0iFwtzW8 
+**Note:** The current site is not much different than this update, to view this update just load - https://cerberus.saren.io/

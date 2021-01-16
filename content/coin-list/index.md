@@ -9,40 +9,26 @@ author: "Jay Kumar"
 New Features?
 -----------
 
-I started this app back in August 2020 as I was looking for an Ethereum portfolio app that you just put your public key in, and it gives you all the details in one place.
-At first, I was using delta, but their prices weren't always up to date, and a lot of coins I was trading were just not on there.
+Now that I was satisfied with the analytics I was getting out of the coin page,I wanted to see more details about more coins.
+Coins that I didn't own but wanted to, check up on old coins I had which did good and bad. I needed more perspective and insight on my own trading trends to see where I can improve better.
 
-I needed an app that could show me all the coins I hold but also tell me all the details like price action, market data, where to buy etc. in the same place. I used Zerion, but it always took too long to load or failed to load in some cases.
-I thought I would give it a go and began building a simple webpage that gets all your tokens, and then calls the Coingecko api to give you all the details about it.
+I was already getting data of other ERC20 tokens using their contract address, I thought maybe if I add the contract address as id in database and then fetch all this data, I could do it.
+I could make a list of all the coins I wanted to see analytics of, add them to a database as ID, and fill their object with its data constantly and keep it updated. Much like a cache, but in a database.
 
 Design
 -----------
 
-When I was designing it, I really needed something to be super simple, where I don't have to think at all while using it, as simplistic user experience as possible.
-I started by just showing cards where you just hover over any of them to get details about it. For the CSS, I decided to follow what Uniswap was doing, as it was the best looking crypto app I had seen so far.
+Once I had the data, it was time to display it. I wanted to do it in a very simplistic way but also it needed to be super fast. 
+Being a millennial, my attention span is already low, I knew it would start to really annoy me if it was slow to load, and I did not want to wait for all the coins to load every time I changed the page.
+I knew I could optimise the queries and get all the data super quick, now displaying it all together without the UI crashing was a challenge.
 
-To speed up development, I used Gatsby.js and built it as a purely front-end application.
-At the time, I did not need any server side code and was happy to change it into a full stack app once I needed a database.
-It allowed me to get a prototype up and running in a couple of days and start getting feedback on it.
-
-Once I finished the cards view, I decided to add a table view as it would be easier to view, and I wanted the ability to sort my holdings based on price change, market cap, volume etc.
-To do this quickly, I installed ant design and used its prebuilt components for faster development.
-
-Wallet Search and Save
----------------------------
-
-Subsequently, after finishing up the table view I decided I wanted the ability to search for any wallet instead of hard coding my public key and wanted the ability to save any wallet, 
-so I don't have to search for it over and over again every time I refresh the page.
-Although Etherscan can be used for this, the prices of low cap coins are mostly unavailable. 
-
-Additionally, I wanted a better view and more organised way of looking at the coins in any eth wallet.
-The idea behind it was to find public keys of good traders and follow closely how they trade to notice any useful trends I could use in my own trading strategy.
+Although, I only had 200 coins in mind at first, I wanted to eventually take it to the next level with maybe thousand coins or more. I ended up using the Ant Design library and importing a table for it.
+I have used it in a lot of my earlier projects and its super fast to get it up and running, I could do lazy loading and paging easily if I wanted to.
 
 
 Conclusion
 -------------
 
-I really enjoyed making this first iteration and shared it with people I knew who were into Crypto.
-I got a few feature requests by them and overall they really liked what I was doing which motivated me to continue working on this app.
-
-You can view the video to the initial prototype here - https://www.youtube.com/watch?v=w_I0iFwtzW8 
+After I had an idea on how I was going to display it in my head. it was pretty straight forward to code it. I added options to sort using multiple criteria, like rank and market cap etc. 
+But also the ability to sort together, I added priority to first rank then volume and so on, so if both rank and volume is selected it would first take the rank then the volume. 
+I also added the ability to select how many coins you want to see in the table, if I had a portrait screen I could change it to 100 and if it was a normal widescreen I could switch to 50.
