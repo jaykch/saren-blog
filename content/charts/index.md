@@ -6,43 +6,44 @@ tags: ['story','feature']
 author: "Jay Kumar"
 ---
 
-New Features?
+
+Version 1
 -----------
+Now was the time to just wrap up everything and finish the initial version. 
+When I started this app, I had no idea it was going to be a full-blown DAPP with all the information I would need to help me with my trading.
+I had a lot of fun building it and made a few good contacts along the way, nothing special, just really cool guys who were interested in my project.
+There were a lot of bugs, and I had a huge to-do list to go through, but I was fairly confident I could do it all within a week. 
 
-I started this app back in August 2020 as I was looking for an Ethereum portfolio app that you just put your public key in, and it gives you all the details in one place.
-At first, I was using delta, but their prices weren't always up to date, and a lot of coins I was trading were just not on there.
+Now that my university sem was over, I could spend an entire week on this to finish the charts and fix all the bugs.
 
-I needed an app that could show me all the coins I hold but also tell me all the details like price action, market data, where to buy etc. in the same place. I used Zerion, but it always took too long to load or failed to load in some cases.
-I thought I would give it a go and began building a simple webpage that gets all your tokens, and then calls the Coingecko api to give you all the details about it.
+Chart Data
+-----------
+I started with gathering 24h chart data. I wanted this completely separate from the other data I was collection, so I ended up building a brand-new server just for this.
+As I was building it, I realised how easy it was to get all the interval data like 90 day, 30 day and so on. 
+I ended up building 2 servers, one would collect the 24h chart data and update it every 15 minutes, and the other would collect all the other intervals sequentially for all coins every 2 hours.
 
 Design
 -----------
 
-When I was designing it, I really needed something to be super simple, where I don't have to think at all while using it, as simplistic user experience as possible.
-I started by just showing cards where you just hover over any of them to get details about it. For the CSS, I decided to follow what Uniswap was doing, as it was the best looking crypto app I had seen so far.
+I really liked the Uniswap info chart design, they were just way more intuitive than the regular candlestick charts. I opened their github to figure out which library they were using. 
+I had never used Re-Charts before, but their API looked fairly straight-forward and sure enough, it was a very pleasant experience to build these charts with [Recharts](https://recharts.org/en-US).
 
-To speed up development, I used Gatsby.js and built it as a purely front-end application.
-At the time, I did not need any server side code and was happy to change it into a full stack app once I needed a database.
-It allowed me to get a prototype up and running in a couple of days and start getting feedback on it.
+Bug Fixes and Improvements
+----------
 
-Once I finished the cards view, I decided to add a table view as it would be easier to view, and I wanted the ability to sort my holdings based on price change, market cap, volume etc.
-To do this quickly, I installed ant design and used its prebuilt components for faster development.
+I had accumulated a list of many bugs and issues over the course of the past few months. Some major ones are mentioned below:
+* Better regex for URL display in market info section.
+* Better regex for description of each coin to include new lines.
+* Entire wallet UI was broken on Tablet.
+* New and improved table mode for Wallet.
+* Empty coins crashing the wallet.
 
-Wallet Search and Save
----------------------------
-
-Subsequently, after finishing up the table view I decided I wanted the ability to search for any wallet instead of hard coding my public key and wanted the ability to save any wallet, 
-so I don't have to search for it over and over again every time I refresh the page.
-Although Etherscan can be used for this, the prices of low cap coins are mostly unavailable. 
-
-Additionally, I wanted a better view and more organised way of looking at the coins in any eth wallet.
-The idea behind it was to find public keys of good traders and follow closely how they trade to notice any useful trends I could use in my own trading strategy.
-
+Fixing these was tedious but sure enough, I got through it and finalised it.
 
 Conclusion
 -------------
 
-I really enjoyed making this first iteration and shared it with people I knew who were into Crypto.
-I got a few feature requests by them and overall they really liked what I was doing which motivated me to continue working on this app.
+Overall I had a blast building this app and somewhat proud that I was using my own app exclusively instead of any other for all my trading needs. 
+Of course, I still had to use binance and Uniswap for the actual trading, but I am glad I can do all the research through my app.
 
-You can view the video to the initial prototype here - https://www.youtube.com/watch?v=w_I0iFwtzW8 
+The app can be viewed [here](https://cerberus.saren.io).

@@ -25,7 +25,6 @@ I knew I could optimise the queries and get all the data super quick, now displa
 Although, I only had 200 coins in mind at first, I wanted to eventually take it to the next level with maybe thousand coins or more. I ended up using the Ant Design library and importing a table for it.
 I have used it in a lot of my earlier projects and its super fast to get it up and running, I could do lazy loading and paging easily if I wanted to.
 
-
 Conclusion
 -------------
 
