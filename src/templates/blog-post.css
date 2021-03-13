@@ -37,6 +37,11 @@
     line-height: 2rem;
 }
 
+.post ul{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
 .post .tag{
     margin: 0 5px;
     font-weight: bold;
