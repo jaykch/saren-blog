@@ -43,9 +43,9 @@ At the moment I have the following use cases that will be implemented in the nea
 * **Advertisements:** Any advertisements on Saren apps will have to paid for in Saren tokens which will be redistributed
   amongst the app users to build a self-sustained ecosystem.
 * **Cerberus:** Once the decentralisation of Cerberus is complete, companies will have to hold Saren tokens to be able
-  to list new coins on **[Cerberus](https://cerberus.Saren.io)**.
+  to list new coins on **[Cerberus](https://cerberus.saren.io)**.
 * **Shill my coins app:** Our next app that will be released in Q2 2021 will be a reddit like forum where Saren holders
-  will be able to make a post about any coin listed on **[Cerberus](https://cerberus.Saren.io)**.
+  will be able to make a post about any coin listed on **[Cerberus](https://cerberus.saren.io)**.
 
 As the project develops and new apps are added to Saren, more use cases will be created which will use SAR as the
 primary currency.
