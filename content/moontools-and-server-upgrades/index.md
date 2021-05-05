@@ -22,6 +22,9 @@ data for tokens and allows you to monitor and strategize your trades. Their app 
 you to track portfolio, price alerts, market explorer, and many more features coming soon. Moreover, they have advanced
 features like notifications for new token listings, access to reviews on tokens, partnership perks, etc.
 
+Look out for Moontools button on token pages and wallet page on **[Cerberus](http://cerberus.saren.io/)** and a Saren
+icon on their **[Moontools App](https://app.moontools.io/pairs/uniswap/0x4896938404e0af7b694076329013bf5973c01a93)**.
+
 **Coming Next:** More partnerships and AMA
 
 AMA Nerd Finance
