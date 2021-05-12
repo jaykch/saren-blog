@@ -97,7 +97,7 @@ and our website and blog are a good place to start as well - http://saren.io/ ht
 
 ### Community Questions
 
-*"Get rewarded for keeping track of your crypto" is it something like rewarding each step of a person via health /
+**"Get rewarded for keeping track of your crypto" is it something like rewarding each step of a person via health /
 sports tracker app?**
 
 There will be a separate token launched that will be paid to DAPP users and advertisers will have to pay in those tokens
@@ -181,7 +181,7 @@ funds. Think of it as the chainlink model, initial development through funding, 
 There will be a way to vote out tokens in the future, the goal is to make it truly decentralised, eventually, all
 actions will be done by the community, like wikipedia but secured by a democratised voting mechanism.
 
-*When will the price increase % be updated? For example, right now we are up over 50% but on the cerberus App it says we
+**When will the price increase % be updated? For example, right now we are up over 50% but on the cerberus App it says we
 are down in terms of %)**
 
 We have a performance upgrade coming after our rollout of pancakeswap listings. It should be fairly soon.
