@@ -9,7 +9,7 @@ author: "Jay Kumar"
 Pancakeswap Listings
 -----------
 We are happy to announce that pancakeswap listings are now live. It took a while as the subgraph for pancakeswap is out
-of sync and there is no reliable way to get historic data for binance chain coins. After some thought, I decided to
+of sync and there is no reliable way to get historic data for binance chain coins. After somethought, I decided to
 start storing our own data just like coinmarketcap and coingecko. I had this planned for a while and finally decided to
 go through with it.
 
